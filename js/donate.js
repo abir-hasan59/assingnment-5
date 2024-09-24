@@ -16,11 +16,18 @@ document.getElementById('btn-first').addEventListener('click',function(event){
         const newNeededAmount = neededNumber - donateMoney;
         document.getElementById('donation-needed').innerText = newNeededAmount + ' ' + 'BDT';
 
+        // date
+        const date = new Date();
+        const setTime = date.toLocaleString();
 
-        const container = document.createElement('h1');
-        container.innerText = `${newNeededAmount} Taka is Donate for Flood at Noakhali, Bangladesh`;
-        console.log(container)
-        document.getElementById('history-container').appendChild(container);
+        const div = document.createElement('div');
+        div.innerHTML = ` 
+            <div id="history-container" class="border rounded-2xl p-8 mx-auto md:w-2/4 my-5">
+            <h1 class="text-lg font-bold">${newNeededAmount} Taka is Donate for Flood at Noakhali, Bangladesh</h1>
+            <p>Date: ${setTime} </p>
+        </div>`;
+      
+        document.getElementById('history-section').appendChild(div);
     }
     else{
         alert('Invalid donation amount');
@@ -45,6 +52,18 @@ document.getElementById('btn-second').addEventListener('click',function(event){
         const newNeededAmount = neededNumber - donateMoney;
         document.getElementById('donation-needed').innerText = newNeededAmount + ' ' + 'BDT';
 
+        // date
+        const date = new Date();
+        const setTime = date.toLocaleString();
+        
+        const div = document.createElement('div');
+        div.innerHTML = ` 
+            <div id="history-container" class="border rounded-2xl p-8 mx-auto md:w-2/4 my-5">
+                <h1 class="text-lg font-bold">${newNeededAmount} Taka is Donate for Flood Relief in Feni,Bangladesh</h1>
+                <p>Date: ${setTime} </p>
+            </div>`;
+            document.getElementById('history-section').appendChild(div);
+
     }
     else{
         alert('Invalid donation amount');
@@ -68,6 +87,18 @@ document.getElementById('btn-third').addEventListener('click',function(event){
         const neededNumber = parseFloat(needed);
         const newNeededAmount = neededNumber - donateMoney;
         document.getElementById('donation-needed').innerText = newNeededAmount + ' ' + 'BDT';
+
+        // date
+        const date = new Date();
+        const setTime = date.toLocaleString();
+        
+        const div = document.createElement('div');
+        div.innerHTML = ` 
+            <div id="history-container" class="border rounded-2xl p-8 mx-auto md:w-2/4 my-5">
+            <h1 class="text-lg font-bold">${newNeededAmount} Taka is Aid for Injured in the Quota Movement</h1>
+            <p>Date: ${setTime} </p>
+            </div>`;            
+        document.getElementById('history-section').appendChild(div);
 
     }
     else{
