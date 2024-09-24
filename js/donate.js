@@ -1,5 +1,5 @@
 
-// card 1
+// card 1   
 document.getElementById('btn-first').addEventListener('click',function(event){
     event.preventDefault();
     console.log('first button clicked');
@@ -16,13 +16,16 @@ document.getElementById('btn-first').addEventListener('click',function(event){
         const newNeededAmount = neededNumber - donateMoney;
         document.getElementById('donation-needed').innerText = newNeededAmount + ' ' + 'BDT';
 
+
         const container = document.createElement('h1');
         container.innerText = `${newNeededAmount} Taka is Donate for Flood at Noakhali, Bangladesh`;
         console.log(container)
         document.getElementById('history-container').appendChild(container);
     }
     else{
-        alert('Invalid donation amount')
+        alert('Invalid donation amount');
+        const model =document.getElementById('my_modal_1').close();
+        return model;
     }
 })
 
@@ -44,7 +47,9 @@ document.getElementById('btn-second').addEventListener('click',function(event){
 
     }
     else{
-        alert('Invalid donation amount')
+        alert('Invalid donation amount');
+        const model =document.getElementById('my_modal_1').close();
+        return model;
     }
 })
 
@@ -66,11 +71,8 @@ document.getElementById('btn-third').addEventListener('click',function(event){
 
     }
     else{
-        alert('Invalid donation amount')
+        alert('Invalid donation amount');
+        const model =document.getElementById('my_modal_1').close();
+        return model;
     }
-})
-
-
-document.getElementById('btn-home').addEventListener('click',function(){
-    console.log('home clicked')
 })
