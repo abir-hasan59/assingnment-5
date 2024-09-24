@@ -1,5 +1,8 @@
+
 // card 1
-document.getElementById('btn-first').addEventListener('click',function(){
+document.getElementById('btn-first').addEventListener('click',function(event){
+    event.preventDefault();
+    console.log('first button clicked');
     const donateMoney = getValueById('input-first');
     
     if(donateMoney>0){
@@ -13,10 +16,10 @@ document.getElementById('btn-first').addEventListener('click',function(){
         const newNeededAmount = neededNumber - donateMoney;
         document.getElementById('donation-needed').innerText = newNeededAmount + ' ' + 'BDT';
 
-            document.getElementById('my_modal_4').classList.remove('hidden');
-        document.getElementById('close').addEventListener('click',function(){
-            document.getElementById('my_modal_4').classList.add('hidden');
-        })
+        const container = document.createElement('h1');
+        container.innerText = `${newNeededAmount} Taka is Donate for Flood at Noakhali, Bangladesh`;
+        console.log(container)
+        document.getElementById('history-container').appendChild(container);
     }
     else{
         alert('Invalid donation amount')
@@ -24,7 +27,8 @@ document.getElementById('btn-first').addEventListener('click',function(){
 })
 
 //  card 2
-document.getElementById('btn-second').addEventListener('click',function(){
+document.getElementById('btn-second').addEventListener('click',function(event){
+    event.preventDefault();
     const donateMoney = getValueById('input-second');
     
     if(donateMoney > 0){
@@ -45,7 +49,8 @@ document.getElementById('btn-second').addEventListener('click',function(){
 })
 
 // card 3
-document.getElementById('btn-third').addEventListener('click',function(){
+document.getElementById('btn-third').addEventListener('click',function(event){
+    event.preventDefault();
     const donateMoney = getValueById('input-third');
     
     if(donateMoney > 0){
@@ -63,4 +68,9 @@ document.getElementById('btn-third').addEventListener('click',function(){
     else{
         alert('Invalid donation amount')
     }
+})
+
+
+document.getElementById('btn-home').addEventListener('click',function(){
+    console.log('home clicked')
 })

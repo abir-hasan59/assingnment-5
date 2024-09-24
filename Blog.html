@@ -1,11 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://kit.fontawesome.com/e657265f55.js" crossorigin="anonymous"></script>
+  </head>
+  <body>
+    <header>
+      <nav class="p-8 bg-[#f0e8d8]">
+        <div class="flex justify-between px-2 md:px-20">
+          <div>
+            <button id="btn-home" class="btn bg-[#B4F461] border-hidden font-bold px-6">
+              Home
+            </button>
+          </div>
+          <div class="inline-flex items-center gap-3 font-bold">
+            <img src="assets/logo.png" alt="" />
+            <h3 class="hidden sm:block">Donate Bangladesh</h3>
+          </div>
+          <div class="inline-flex items-center gap-3">
+            <img src="assets/coin.png" alt="" />
+            <p id="donation-needed" class="font-bold text-[#504e4eb3]">
+              10000 BDT
+            </p>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <main class="w-3/4 mx-auto mt-8">
+      <h1 class="font-bold text-4xl">Important FAQ <i class="fa-solid fa-question"></i></h1>
+
+      <div class="flex flex-col mt-8 gap-5">
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            What is the Document Object Model (DOM)?
+          </div>
+          <div class="collapse-content">
+            <p>
+              The Document Object Model (DOM) is a programming interface for web
+              documents, representing the structure of a webpage in a tree-like
+              form where every element (such as tags, attributes, text) is an
+              object. It allows developers to interact with and manipulate the
+              HTML content of a web page dynamically.
+            </p>
+          </div>
+        </div>
+
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            How do you select an element from the DOM?
+          </div>
+          <div class="collapse-content">
+            <p>
+              By ID: Use getElementById() to select a single element by its
+              unique id attribute. By Class: Use getElementsByClassName() to
+              select all elements that share the same class name. By Tag Name:
+              Use getElementsByTagName() to select all elements with a specific
+              HTML tag name (e.g., div, p). By CSS Selector: Use querySelector()
+              to select the first element that matches a CSS selector, or
+              querySelectorAll() to select all elements that match the selector.
+              By Name Attribute: Use getElementsByName() to select elements
+              based on their name attribute, often used in forms.
+            </p>
+          </div>
+        </div>
+
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation  in the context of the DOM, and Why is it useful? 
+          </div>
+          <div class="collapse-content">
+            <p>
+              Event delegation is a technique in the DOM where a single event
+              listener is attached to a parent element to manage events
+              triggered by its child elements. Instead of adding individual
+              listeners to each child, the parent handles events as they bubble
+              up from the children. <br>
+              This is useful because:
+              <br>
+              Improved performance: Reduces the number of event listeners, which saves
+              memory and enhances performance, especially in large, dynamic
+              interfaces. <br>Dynamic element handling: It allows you to handle
+              events on newly created child elements without needing to attach
+              new listeners.<br> Simplified code: Centralizes event management in
+              one place, making it easier to maintain.
+            </p>
+          </div>
+        </div>
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" />
+          <div class="collapse-title text-xl font-medium">
+            What is event delegation  in the context of the DOM, and Why is it useful?
+          </div>
+          <div class="collapse-content">
+            <p>
+                Event delegation is a technique in the DOM where a single event listener is attached to a parent element to manage events triggered by its child elements. Instead of attaching separate listeners to each child, the parent element catches the event as it "bubbles up" from the child (thanks to event bubbling in the DOM). When an event occurs, the parent identifies the actual target (the child that triggered the event) and responds accordingly. This approach is particularly useful because it simplifies event handling, especially when dealing with dynamic or large sets of elements. It improves performance by reducing the number of event listeners attached to individual elements, which conserves memory and processing power. Additionally, it allows handling of future elements that might be added dynamically to the parent, without the need for additional event listeners, making the code more flexible and maintainable.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="js/blog.js"></script>
+  </body>
 </html>
